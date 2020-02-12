@@ -1,36 +1,29 @@
-# TestGaskar
+## Тестовое задание для Gaskar Group на вакансию Frontend-разрабетчик.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Реализация хранения данных в storage браузера выполнена не очень хорошо (на мой взгляд) - нехватка опыта.
+Но в UserService закомментированы методы получения данных из in-memory-data - симуляции сервера.
 
-## Development server
+## Текст задания
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Разработать приложение, используя Angular 6+. 
 
-## Code scaffolding
+Приложение должно состоять из 3 форм:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* отображение списка;
+* просмотр;
+* редактирование.
 
-## Build
+Тему для внешнего вида выбрать на своё усмотрение(оформлению можно придать минимальное значение).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Между формами должен быть использован роутинг `@uirouter/angular(https://ui-router.github.io/ng2)`.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## TODO
+На форме просмотра\редактирования сущности должен быть гард, который проверяет может ли пользователь просматривать данную форму (пусть случайно выдает true или false). Если false, то показать уведомление о том, что доступ запрещен.
 
 Форма отображения списка должна быть реализована через smart и dumb компоненты:
 
 smart-отвечает за получение данных в виде Observable;
 dumb-отображает данные и передаёт родителю события.
+
+На форме списка сущностей можно создать новый элемент списка, удалить или перейти к редактированию\просмотру элемента списка.
 
 Данные хранить в storage браузера.

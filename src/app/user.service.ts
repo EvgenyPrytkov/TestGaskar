@@ -29,7 +29,7 @@ export class UserService {
   // }
 
   getUser(id: number): Observable<User> {
-    return of((JSON.parse(localStorage.getItem('users'))).filter(x => x.id == id)[0]);
+    return of(JSON.parse(localStorage.getItem('users')).find(x => x.id === id));
   }
 
   /** GET users from the server */

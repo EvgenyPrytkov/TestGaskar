@@ -27,7 +27,7 @@ export class UserDetailComponent implements OnInit {
     this.userService.getUser(id)
       .subscribe(user => this.user = user);
   }
-  
+
   goBack(): void {
     this.location.back();
   }
